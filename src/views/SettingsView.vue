@@ -14,9 +14,9 @@
         <h1 class="text-center">鈴聲設定</h1>
       </v-col>
       <v-col cols="12">
-        <v-table>
+        <v-table class="change">
           <thead>
-            <tr>
+            <tr rounded>
               <th>名稱</th>
               <th>試聽</th>
               <th>選擇</th>
@@ -52,5 +52,13 @@ const { alarms, selectedAlarm, notify } = storeToRefs(settings)
 <style scoped>
 :deep(.v-selection-control-group.v-selection-control-group--inline) {
   margin: auto
+}
+
+.change {
+  background-color: lightgreen;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
 }
 </style>

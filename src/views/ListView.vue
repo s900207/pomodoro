@@ -4,11 +4,11 @@
       <v-col cols="12">
         <h1 class="text-center">事項</h1>
       </v-col>
-      <v-col cols="12">
+      <v-col cols="12" class="change">
         <v-text-field variant="solo-filled" label="新增事項" v-model="newItem" :rules="[rules.required, rules.length]"
           append-icon="mdi-plus" ref="newItemInput" @click:append="onInputSubmit"
           @keydown.enter="onInputSubmit"></v-text-field>
-        <v-table>
+        <v-table class="change">
           <thead>
             <tr>
               <th>名稱</th>
@@ -46,7 +46,7 @@
         <h1 class="text-center">已完成事項</h1>
       </v-col>
       <v-col col="12">
-        <v-table>
+        <v-table class="change">
           <thead>
             <tr>
               <th>名稱</th>
@@ -106,3 +106,12 @@ const rules = {
   }
 }
 </script>
+<style scoped>
+.change {
+  background-color: lightgreen;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+}
+</style>

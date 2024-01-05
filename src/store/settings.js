@@ -4,13 +4,14 @@ export const useSettingsStore = defineStore('settings', {
   state: () => ({
     alarms: [
       { id: 1, name: '鬧鐘', file: new URL('@/assets/alarm.mp3', import.meta.url).href },
-      { id: 2, name: 'Yay', file: new URL('@/assets/yay.mp3', import.meta.url).href }
+      { id: 2, name: 'Yay', file: new URL('@/assets/yay.mp3', import.meta.url).href },
+      { id: 3, name: 'urusai', file: new URL('@/assets/urusai.mp3', import.meta.url).href }
     ],
     selectedAlarm: 1,
     notify: true
   }),
   getters: {
-    selectedAlarmFile () {
+    selectedAlarmFile() {
       const i = this.alarms.findIndex(alarm => alarm.id === this.selectedAlarm)
       return this.alarms[i].file
     }
